@@ -7,16 +7,16 @@ require 'addressable/uri'
 
 dir = Pathname(__FILE__).dirname.expand_path + 'ken'
 
-require dir + 'util'
-require dir + 'session'
-require dir + 'resource'
-require dir + 'type'
-require dir + 'view'
-require dir + 'property'
-require dir + 'attribute'
-require dir + 'collection'
-require dir + 'topic'
-require dir + 'logger'
+require (dir + 'util').to_s
+require (dir + 'session').to_s
+require (dir + 'resource').to_s
+require (dir + 'type').to_s
+require (dir + 'view').to_s
+require (dir + 'property').to_s
+require (dir + 'attribute').to_s
+require (dir + 'collection').to_s
+require (dir + 'topic').to_s
+require (dir + 'logger').to_s
 
 # init logger as soon as the library is required
 Ken::Logger.new(STDOUT, :error)
